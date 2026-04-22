@@ -160,7 +160,6 @@ cdss-free/
 ├── main.py                          # FastAPI app — all endpoints
 ├── config.py                        # All settings + constants
 ├── requirements.txt
-├── render.yaml                      # Render.com deployment config
 ├── .env.example                     # Copy to .env, add your keys
 │
 ├── agents/
@@ -209,7 +208,5 @@ cdss-free/
 | Agent orchestration | Bedrock Agents | LangGraph StateGraph |
 | Vector store | OpenSearch Serverless | ChromaDB (local) |
 | Session memory | DynamoDB | SQLite |
-| API | Lambda + API Gateway | FastAPI + Uvicorn |
-| Auth | Cognito | (add FastAPI JWT if needed) |
-| Hosting | AWS (~$50-200/mo) | Render + Vercel (free) |
-| Monthly cost | $50–200+ | $0 |
+| Hosting | Localhost | (add FastAPI JWT if needed) |
+| Monthly cost | $0 | $0 |

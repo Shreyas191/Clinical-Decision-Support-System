@@ -4,9 +4,11 @@ __pycache__/
 *.pyc
 *.pyo
 sessions.db*
-vectorstore/chroma_db/
+users.db*
 test_chroma/
 diag_chroma.py
 list_models.py
 main_output.txt
+vectorstore/chroma_db/
+.claude/
 .DS_Store

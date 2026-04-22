@@ -1,0 +1,31 @@
+# Fly.io configuration — deploy with: fly deploy
+app = "cdss-free"
+primary_region = "ord"
+
+[build]
+
+[env]
+  DATA_DIR = "/data"
+  FRONTEND_URL = "https://your-app.vercel.app"
+  BACKEND_URL  = "https://cdss-free.fly.dev"
+
+[http_service]
+  internal_port     = 8000
+  force_https       = true
+  auto_stop_machines  = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.concurrency]
+    type       = "connections"
+    hard_limit = 25
+    soft_limit = 20
+
+[[vm]]
+  memory   = "512mb"
+  cpu_kind = "shared"
+  cpus     = 1
+
+[[mounts]]
+  source      = "cdss_data"
+  destination = "/data"

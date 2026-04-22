@@ -57,7 +57,8 @@ def _verify_password(plain: str, hashed: str) -> bool:
 
 
 # ── Database ──────────────────────────────────────────────────────────────────
-_DB_PATH = os.path.join(os.path.dirname(__file__), "users.db")
+_DATA_DIR = os.getenv("DATA_DIR", os.path.dirname(__file__))
+_DB_PATH  = os.path.join(_DATA_DIR, "users.db")
 
 
 def _db() -> sqlite3.Connection:
@@ -67,6 +68,7 @@ def _db() -> sqlite3.Connection:
 
 
 def _init_db() -> None:
+    os.makedirs(_DATA_DIR, exist_ok=True)
     with _db() as conn:
         conn.execute("""
             CREATE TABLE IF NOT EXISTS users (

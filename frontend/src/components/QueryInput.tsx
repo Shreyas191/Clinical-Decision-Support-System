@@ -3,18 +3,16 @@ import { useState, useRef, useEffect } from 'react'
 interface Props {
   onSubmit: (query: string) => void
   loading: boolean
-  onNewSession: () => void
 }
 
-const PLACEHOLDER = `Describe the clinical scenario, e.g.
+const PLACEHOLDER = `Describe the clinical scenario…
 
-"65-year-old with Type 2 diabetes (HbA1c 8.2%) and hypertension (BP 145/92) on metformin 1000mg BID. What are evidence-based next steps for glycemic and BP management?"`
+e.g. "65-year-old with T2DM and hypertension on metformin. HbA1c 8.2%, BP 145/92. What are evidence-based next steps?"`
 
-export default function QueryInput({ onSubmit, loading, onNewSession }: Props) {
+export default function QueryInput({ onSubmit, loading }: Props) {
   const [text, setText] = useState('')
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
-  // Auto-resize textarea
   useEffect(() => {
     const el = textareaRef.current
     if (!el) return
@@ -37,15 +35,7 @@ export default function QueryInput({ onSubmit, loading, onNewSession }: Props) {
   }
 
   return (
-    <div className="space-y-3">
-      {/* Disclaimer banner */}
-      <div className="rounded-lg bg-teal-50 border border-teal-200 px-4 py-2.5 text-sm text-teal-800">
-        <span className="font-semibold">Clinical decision support only.</span>{' '}
-        This tool provides evidence-based information for clinician reference.
-        Final clinical decisions rest with the treating clinician.
-      </div>
-
-      {/* Textarea */}
+    <div className="space-y-2">
       <div className="relative">
         <textarea
           ref={textareaRef}
@@ -55,38 +45,29 @@ export default function QueryInput({ onSubmit, loading, onNewSession }: Props) {
           placeholder={PLACEHOLDER}
           disabled={loading}
           rows={4}
-          className="w-full resize-none rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-800 placeholder-slate-400 shadow-sm focus:border-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-100 disabled:opacity-60 transition"
+          className="w-full resize-none rounded-lg border border-zinc-200 bg-white px-4 py-3 text-sm text-zinc-800 placeholder-zinc-400 shadow-sm focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-50 disabled:opacity-50 transition"
         />
-        <span className="absolute bottom-2.5 right-3 text-xs text-slate-400 select-none">
-          {text.length > 0 ? `${text.length} chars` : '⌘ Enter to submit'}
-        </span>
+        {text.length === 0 && (
+          <span className="absolute bottom-3 right-3 text-xs text-zinc-300 select-none">
+            ⌘ Enter
+          </span>
+        )}
       </div>
 
-      {/* Buttons */}
-      <div className="flex gap-2">
-        <button
-          onClick={handleSubmit}
-          disabled={!text.trim() || loading}
-          className="flex-1 rounded-lg bg-teal-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-teal-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
-        >
-          {loading ? (
-            <span className="flex items-center justify-center gap-2">
-              <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
-              Consulting agents…
-            </span>
-          ) : (
-            'Get clinical support'
-          )}
-        </button>
-        <button
-          onClick={onNewSession}
-          disabled={loading}
-          className="rounded-lg border border-slate-200 px-3 py-2.5 text-sm text-slate-500 hover:bg-slate-100 disabled:opacity-50 transition"
-          title="Start a new session"
-        >
-          New session
-        </button>
-      </div>
+      <button
+        onClick={handleSubmit}
+        disabled={!text.trim() || loading}
+        className="w-full rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-40 disabled:cursor-not-allowed transition"
+      >
+        {loading ? (
+          <span className="flex items-center justify-center gap-2">
+            <span className="inline-block h-3.5 w-3.5 animate-spin rounded-full border-2 border-white border-t-transparent" />
+            Consulting agents
+          </span>
+        ) : (
+          'Get clinical support'
+        )}
+      </button>
     </div>
   )
 }

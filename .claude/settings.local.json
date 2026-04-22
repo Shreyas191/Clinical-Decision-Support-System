@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/pip install *)",
+      "Bash(.venv/bin/pip show *)",
+      "Bash(.venv/bin/python *)",
+      "Bash(npm run *)",
+      "Bash(frontend/node_modules/.bin/tsc --noEmit --project frontend/tsconfig.json)"
+    ]
+  }
+}

@@ -16,13 +16,14 @@ import uuid
 from pathlib import Path
 from typing import AsyncGenerator
 
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
 from agents.guardrails import check_input, validate_output
 from agents.supervisor import app_graph
+from auth import admin_router, get_current_user, router as auth_router
 
 # ── EHR data ─────────────────────────────────────────────────────────────────
 _EHR_PATH = Path(__file__).parent / "data" / "mock_ehr" / "patients.json"
@@ -42,6 +43,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(auth_router)
+app.include_router(admin_router)
 
 
 # ── Request / response models ─────────────────────────────────────────────────
@@ -85,7 +89,7 @@ def health():
 
 
 @app.post("/query", response_model=QueryResponse)
-def query(req: QueryRequest):
+def query(req: QueryRequest, _user: dict = Depends(get_current_user)):
     session_id = req.session_id or str(uuid.uuid4())
 
     # Input guardrail
@@ -124,7 +128,7 @@ def query(req: QueryRequest):
 
 
 @app.post("/query/stream")
-async def query_stream(req: QueryRequest):
+async def query_stream(req: QueryRequest, _user: dict = Depends(get_current_user)):
     """
     Streaming endpoint — returns synthesis tokens via Server-Sent Events.
     Frontend connects with EventSource or fetch + ReadableStream.
@@ -155,7 +159,7 @@ async def query_stream(req: QueryRequest):
 
 
 @app.get("/ehr/patients", response_model=list[PatientSummary])
-def ehr_patients():
+def ehr_patients(_user: dict = Depends(get_current_user)):
     return [
         {
             "patient_id": p["patient_id"],
@@ -169,7 +173,7 @@ def ehr_patients():
 
 
 @app.get("/ehr/patients/{patient_id}")
-def ehr_patient(patient_id: str):
+def ehr_patient(patient_id: str, _user: dict = Depends(get_current_user)):
     patient = _ehr_index.get(patient_id)
     if not patient:
         raise HTTPException(status_code=404, detail=f"Patient {patient_id} not found")
@@ -177,7 +181,7 @@ def ehr_patient(patient_id: str):
 
 
 @app.post("/query/with-patient", response_model=QueryResponse)
-def query_with_patient(req: PatientQueryRequest):
+def query_with_patient(req: PatientQueryRequest, _user: dict = Depends(get_current_user)):
     session_id = req.session_id or str(uuid.uuid4())
 
     patient = _ehr_index.get(req.patient_id)

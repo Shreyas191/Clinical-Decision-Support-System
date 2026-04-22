@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react'
 import axios from 'axios'
 import type { QueryResponse, HistoryTurn } from '../types'
+import { authHeader } from '../auth'
 
 const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000'
 
@@ -30,7 +31,7 @@ export function useCDSS() {
         ? { query: queryText, patient_id: patientId, session_id: state.sessionId }
         : { query: queryText, session_id: state.sessionId }
 
-      const { data } = await axios.post<QueryResponse>(endpoint, payload)
+      const { data } = await axios.post<QueryResponse>(endpoint, payload, { headers: authHeader() })
 
       if (data.session_id) {
         localStorage.setItem('cdss_session_id', data.session_id)
@@ -62,7 +63,7 @@ export function useCDSS() {
       const msg =
         axios.isAxiosError(err)
           ? err.response?.data?.detail ?? err.message
-          : 'Unexpected error — is the backend running?'
+          : 'Unexpected error. Is the backend running?'
       setState(s => ({ ...s, loading: false, error: msg }))
     }
   }, [state.sessionId])

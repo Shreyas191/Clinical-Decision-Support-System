@@ -4,13 +4,11 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-800 antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-zinc-50 text-zinc-800 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
-}
 
-@layer utilities {
-  .prose-clinical {
-    @apply text-sm leading-relaxed text-slate-700;
+  * {
+    @apply transition-colors duration-150;
   }
 }

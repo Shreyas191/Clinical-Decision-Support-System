@@ -1,0 +1,750 @@
+[
+  {
+    "patient_id": "PT001",
+    "name": "Margaret Holloway",
+    "age": 67,
+    "gender": "Female",
+    "chief_complaint": "Poorly controlled blood glucose and worsening fatigue",
+    "active_conditions": [
+      "Type 2 Diabetes Mellitus (HbA1c 9.1%)",
+      "Hypertension",
+      "Obesity (BMI 34.2)",
+      "Hyperlipidemia"
+    ],
+    "current_medications": [
+      { "name": "Metformin", "dose": "1000 mg", "frequency": "BID" },
+      { "name": "Glipizide", "dose": "10 mg", "frequency": "BID" },
+      { "name": "Lisinopril", "dose": "10 mg", "frequency": "daily" },
+      { "name": "Atorvastatin", "dose": "40 mg", "frequency": "nightly" },
+      { "name": "Aspirin", "dose": "81 mg", "frequency": "daily" }
+    ],
+    "recent_labs": {
+      "HbA1c": { "value": 9.1, "unit": "%" },
+      "Fasting glucose": { "value": 214, "unit": "mg/dL" },
+      "Creatinine": { "value": 0.9, "unit": "mg/dL" },
+      "eGFR": { "value": 72, "unit": "mL/min/1.73m²" },
+      "LDL": { "value": 98, "unit": "mg/dL" },
+      "BP": { "value": "148/92", "unit": "mmHg" },
+      "BMI": { "value": 34.2, "unit": "kg/m²" },
+      "Potassium": { "value": 4.1, "unit": "mEq/L" }
+    },
+    "allergies": ["Sulfonamides"],
+    "visit_history": [
+      {
+        "date": "2026-01-15",
+        "type": "Follow-up",
+        "notes": "HbA1c worsened from 8.4% to 9.1%. Patient reports dietary non-compliance over holidays. BP still above target. Discussed adding SGLT2 inhibitor; deferred due to UTI history."
+      },
+      {
+        "date": "2025-10-08",
+        "type": "Follow-up",
+        "notes": "HbA1c 8.4%. Glipizide dose increased. Counseled on carbohydrate counting. BP 142/88 — lisinopril dose increased from 5 mg to 10 mg."
+      },
+      {
+        "date": "2025-07-20",
+        "type": "Annual wellness",
+        "notes": "Routine annual visit. HbA1c 7.9%, patient was adherent. No new complaints. Discussed weight loss and referral to dietitian accepted."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT002",
+    "name": "Robert Castillo",
+    "age": 72,
+    "gender": "Male",
+    "chief_complaint": "Shortness of breath on exertion and ankle swelling",
+    "active_conditions": [
+      "Heart Failure with Reduced Ejection Fraction (HFrEF, EF 30%)",
+      "Atrial Fibrillation (persistent)",
+      "Hypertension",
+      "Type 2 Diabetes Mellitus",
+      "CKD Stage 3a (eGFR 52)"
+    ],
+    "current_medications": [
+      { "name": "Carvedilol", "dose": "12.5 mg", "frequency": "BID" },
+      { "name": "Sacubitril/Valsartan (Entresto)", "dose": "49/51 mg", "frequency": "BID" },
+      { "name": "Furosemide", "dose": "40 mg", "frequency": "daily" },
+      { "name": "Spironolactone", "dose": "25 mg", "frequency": "daily" },
+      { "name": "Apixaban", "dose": "5 mg", "frequency": "BID" },
+      { "name": "Empagliflozin", "dose": "10 mg", "frequency": "daily" },
+      { "name": "Atorvastatin", "dose": "40 mg", "frequency": "nightly" }
+    ],
+    "recent_labs": {
+      "BNP": { "value": 820, "unit": "pg/mL" },
+      "Creatinine": { "value": 1.6, "unit": "mg/dL" },
+      "eGFR": { "value": 52, "unit": "mL/min/1.73m²" },
+      "Potassium": { "value": 4.8, "unit": "mEq/L" },
+      "Sodium": { "value": 136, "unit": "mEq/L" },
+      "HbA1c": { "value": 7.2, "unit": "%" },
+      "BP": { "value": "118/72", "unit": "mmHg" },
+      "HR": { "value": 78, "unit": "bpm (rate-controlled AFib)" },
+      "INR": { "value": "N/A (on DOAC)", "unit": "" }
+    },
+    "allergies": ["ACE inhibitors (cough)"],
+    "visit_history": [
+      {
+        "date": "2026-02-10",
+        "type": "Cardiology follow-up",
+        "notes": "Patient reports 2-pillow orthopnea and 2+ pitting edema bilaterally. BNP elevated at 820. Furosemide dose increased. Repeat echo scheduled — last EF was 30%."
+      },
+      {
+        "date": "2025-11-18",
+        "type": "Follow-up",
+        "notes": "Stable HF symptoms, BNP was 540. Empagliflozin added for HF and CKD benefit. Potassium trending up to 4.8 on spironolactone — monitoring closely."
+      },
+      {
+        "date": "2025-08-05",
+        "type": "ED visit / admission",
+        "notes": "Admitted for acute decompensated HF. IV diuresis with 80 mg furosemide. Discharged on Entresto after ACE inhibitor-to-ARNi switch. AF rate controlled."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT003",
+    "name": "Dorothy Kim",
+    "age": 58,
+    "gender": "Female",
+    "chief_complaint": "Elevated creatinine on routine labs, fatigue",
+    "active_conditions": [
+      "CKD Stage 3b (eGFR 38)",
+      "Type 2 Diabetes Mellitus",
+      "Hypertension",
+      "Anemia of CKD",
+      "Secondary Hyperparathyroidism"
+    ],
+    "current_medications": [
+      { "name": "Insulin Glargine (Lantus)", "dose": "28 units", "frequency": "nightly" },
+      { "name": "Insulin Lispro", "dose": "8 units", "frequency": "with meals TID" },
+      { "name": "Amlodipine", "dose": "10 mg", "frequency": "daily" },
+      { "name": "Losartan", "dose": "50 mg", "frequency": "daily" },
+      { "name": "Darbepoetin alfa", "dose": "40 mcg", "frequency": "every 2 weeks SQ" },
+      { "name": "Calcium carbonate", "dose": "500 mg", "frequency": "TID with meals" },
+      { "name": "Calcitriol", "dose": "0.25 mcg", "frequency": "daily" }
+    ],
+    "recent_labs": {
+      "Creatinine": { "value": 2.1, "unit": "mg/dL" },
+      "eGFR": { "value": 38, "unit": "mL/min/1.73m²" },
+      "HbA1c": { "value": 7.8, "unit": "%" },
+      "Hemoglobin": { "value": 10.2, "unit": "g/dL" },
+      "Phosphorus": { "value": 5.2, "unit": "mg/dL" },
+      "PTH": { "value": 142, "unit": "pg/mL" },
+      "Calcium": { "value": 9.1, "unit": "mg/dL" },
+      "Potassium": { "value": 5.1, "unit": "mEq/L" },
+      "Urine ACR": { "value": 380, "unit": "mg/g" },
+      "BP": { "value": "138/84", "unit": "mmHg" }
+    },
+    "allergies": ["Penicillin"],
+    "visit_history": [
+      {
+        "date": "2026-03-01",
+        "type": "Nephrology follow-up",
+        "notes": "eGFR declined from 44 to 38 over 6 months. Phosphorus elevated at 5.2 — sevelamer considered instead of calcium-based binder. Potassium 5.1, counseled on low-K diet. Nephrology referral for transplant evaluation initiated."
+      },
+      {
+        "date": "2025-12-10",
+        "type": "Follow-up",
+        "notes": "Anemia stable on darbepoetin. Metformin discontinued 3 months ago due to eGFR drop below 45. Switched to insulin. HbA1c improved to 7.8%."
+      },
+      {
+        "date": "2025-09-14",
+        "type": "Follow-up",
+        "notes": "eGFR 44. Discussed CKD progression risk factors. Blood pressure still above target 130/80 — losartan dose up-titrated."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT004",
+    "name": "James Whitfield",
+    "age": 63,
+    "gender": "Male",
+    "chief_complaint": "Palpitations and INR out of therapeutic range",
+    "active_conditions": [
+      "Atrial Fibrillation (paroxysmal)",
+      "Hypertension",
+      "Hyperlipidemia",
+      "History of TIA (2023)"
+    ],
+    "current_medications": [
+      { "name": "Warfarin", "dose": "5 mg", "frequency": "daily (dose adjusted per INR)" },
+      { "name": "Metoprolol succinate", "dose": "50 mg", "frequency": "daily" },
+      { "name": "Ramipril", "dose": "5 mg", "frequency": "daily" },
+      { "name": "Rosuvastatin", "dose": "20 mg", "frequency": "nightly" }
+    ],
+    "recent_labs": {
+      "INR": { "value": 1.8, "unit": "(target 2.0–3.0)" },
+      "Creatinine": { "value": 1.0, "unit": "mg/dL" },
+      "eGFR": { "value": 74, "unit": "mL/min/1.73m²" },
+      "LDL": { "value": 72, "unit": "mg/dL" },
+      "BP": { "value": "134/82", "unit": "mmHg" },
+      "TSH": { "value": 1.8, "unit": "mIU/L" },
+      "CBC": { "value": "Normal", "unit": "" }
+    },
+    "allergies": ["Aspirin (GI bleeding history)"],
+    "visit_history": [
+      {
+        "date": "2026-02-28",
+        "type": "Anticoagulation clinic",
+        "notes": "INR subtherapeutic at 1.8. Patient reports started amoxicillin from dentist 2 weeks ago. Warfarin dose held at 5 mg, recheck in 1 week. Discussed DOAC switch given variable INR control — patient reluctant."
+      },
+      {
+        "date": "2025-11-05",
+        "type": "Cardiology follow-up",
+        "notes": "AF paroxysmal, 2 episodes logged on Kardia monitor. CHA₂DS₂-VASc score 4 (age, HTN, TIA, sex). Continuing anticoagulation. Discussed catheter ablation — patient interested."
+      },
+      {
+        "date": "2025-08-20",
+        "type": "Follow-up",
+        "notes": "INR therapeutic at 2.4. No bleeding events. BP controlled. Metoprolol dose adequate for rate control."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT005",
+    "name": "Patricia Nguyen",
+    "age": 54,
+    "gender": "Female",
+    "chief_complaint": "Weight gain and worsening glycemic control; considering GLP-1 therapy",
+    "active_conditions": [
+      "Type 2 Diabetes Mellitus (HbA1c 8.6%)",
+      "Obesity (BMI 38.7)",
+      "Hypertension",
+      "Non-alcoholic fatty liver disease (NAFLD)",
+      "Depression"
+    ],
+    "current_medications": [
+      { "name": "Metformin", "dose": "1000 mg", "frequency": "BID" },
+      { "name": "Sitagliptin", "dose": "100 mg", "frequency": "daily" },
+      { "name": "Amlodipine", "dose": "5 mg", "frequency": "daily" },
+      { "name": "Sertraline", "dose": "100 mg", "frequency": "daily" },
+      { "name": "Omeprazole", "dose": "20 mg", "frequency": "daily" }
+    ],
+    "recent_labs": {
+      "HbA1c": { "value": 8.6, "unit": "%" },
+      "Fasting glucose": { "value": 188, "unit": "mg/dL" },
+      "ALT": { "value": 62, "unit": "U/L" },
+      "AST": { "value": 48, "unit": "U/L" },
+      "Creatinine": { "value": 0.8, "unit": "mg/dL" },
+      "eGFR": { "value": 88, "unit": "mL/min/1.73m²" },
+      "BMI": { "value": 38.7, "unit": "kg/m²" },
+      "BP": { "value": "136/84", "unit": "mmHg" },
+      "Triglycerides": { "value": 224, "unit": "mg/dL" }
+    },
+    "allergies": ["NKDA"],
+    "visit_history": [
+      {
+        "date": "2026-03-10",
+        "type": "Endocrinology referral",
+        "notes": "Referred for GLP-1 receptor agonist initiation. HbA1c 8.6% despite dual oral therapy. Weight increased 8 lbs since last visit. Liver enzymes elevated consistent with NAFLD. Semaglutide considered for dual benefit on weight and glucose."
+      },
+      {
+        "date": "2025-12-02",
+        "type": "Follow-up",
+        "notes": "DPP-4 inhibitor added at last visit. Minimal HbA1c improvement. Patient motivated for weight loss. Discussed bariatric surgery vs pharmacotherapy."
+      },
+      {
+        "date": "2025-09-08",
+        "type": "Follow-up",
+        "notes": "HbA1c 9.0%. Metformin dose maximized. Counseled on lifestyle. Patient declined insulin. Sitagliptin added."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT006",
+    "name": "Thomas Abernathy",
+    "age": 61,
+    "gender": "Male",
+    "chief_complaint": "Resistant hypertension on three agents",
+    "active_conditions": [
+      "Resistant Hypertension",
+      "Obstructive Sleep Apnea",
+      "Hyperlipidemia",
+      "Pre-diabetes (HbA1c 6.2%)"
+    ],
+    "current_medications": [
+      { "name": "Amlodipine", "dose": "10 mg", "frequency": "daily" },
+      { "name": "Lisinopril", "dose": "40 mg", "frequency": "daily" },
+      { "name": "Chlorthalidone", "dose": "25 mg", "frequency": "daily" },
+      { "name": "Rosuvastatin", "dose": "10 mg", "frequency": "nightly" },
+      { "name": "CPAP", "dose": "8 cmH2O", "frequency": "nightly" }
+    ],
+    "recent_labs": {
+      "BP": { "value": "162/96", "unit": "mmHg (average of 3 readings)" },
+      "Aldosterone/Renin ratio": { "value": 32, "unit": "(elevated, suggests primary aldosteronism)" },
+      "Potassium": { "value": 3.3, "unit": "mEq/L" },
+      "Creatinine": { "value": 1.1, "unit": "mg/dL" },
+      "eGFR": { "value": 68, "unit": "mL/min/1.73m²" },
+      "HbA1c": { "value": 6.2, "unit": "%" },
+      "24hr urine catecholamines": { "value": "Normal", "unit": "" }
+    },
+    "allergies": ["Beta-blockers (severe bradycardia history)"],
+    "visit_history": [
+      {
+        "date": "2026-03-18",
+        "type": "Hypertension specialist referral",
+        "notes": "BP refractory despite 3 agents at max doses. Aldosterone-renin ratio elevated suggesting primary aldosteronism. Adrenal CT ordered. Hypokalemia noted (3.3) — potassium supplementation started. Spironolactone being considered."
+      },
+      {
+        "date": "2025-11-22",
+        "type": "Follow-up",
+        "notes": "Sleep study confirmed moderate OSA, AHI 22. CPAP initiated. BP did not improve significantly — secondary causes workup initiated."
+      },
+      {
+        "date": "2025-08-30",
+        "type": "Follow-up",
+        "notes": "BP 158/94. Chlorthalidone added as third agent. White coat effect ruled out by home monitoring (average 161/95). Ambulatory BP monitoring performed."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT007",
+    "name": "Eleanor Voss",
+    "age": 74,
+    "gender": "Female",
+    "chief_complaint": "Worsening dyspnea, COPD exacerbation vs. heart failure decompensation",
+    "active_conditions": [
+      "COPD (GOLD Stage III)",
+      "Heart Failure with Preserved Ejection Fraction (HFpEF, EF 55%)",
+      "Hypertension",
+      "Atrial Fibrillation",
+      "CKD Stage 2 (eGFR 68)"
+    ],
+    "current_medications": [
+      { "name": "Tiotropium (Spiriva)", "dose": "18 mcg", "frequency": "daily inhaled" },
+      { "name": "Salmeterol/Fluticasone (Advair)", "dose": "50/500 mcg", "frequency": "BID inhaled" },
+      { "name": "Furosemide", "dose": "20 mg", "frequency": "daily" },
+      { "name": "Apixaban", "dose": "2.5 mg", "frequency": "BID (dose-reduced for age/weight)" },
+      { "name": "Diltiazem", "dose": "180 mg", "frequency": "daily (rate control)" },
+      { "name": "Lisinopril", "dose": "5 mg", "frequency": "daily" }
+    ],
+    "recent_labs": {
+      "BNP": { "value": 410, "unit": "pg/mL" },
+      "SpO2": { "value": 91, "unit": "% on room air" },
+      "FEV1": { "value": 48, "unit": "% predicted" },
+      "Creatinine": { "value": 1.2, "unit": "mg/dL" },
+      "eGFR": { "value": 68, "unit": "mL/min/1.73m²" },
+      "Potassium": { "value": 3.9, "unit": "mEq/L" },
+      "BP": { "value": "142/88", "unit": "mmHg" },
+      "HR": { "value": 88, "unit": "bpm" },
+      "CXR": { "value": "Bilateral interstitial markings, hyperinflation", "unit": "" }
+    },
+    "allergies": ["Beta-blockers (bronchospasm)", "NSAIDs"],
+    "visit_history": [
+      {
+        "date": "2026-04-01",
+        "type": "ED visit",
+        "notes": "Presented with 3 days of worsening dyspnea and productive cough. Exam shows bilateral crackles and wheezing. BNP 410, SpO2 91%. Difficult to distinguish COPD exacerbation from HFpEF decompensation. Started prednisone + azithromycin for COPD, IV furosemide 40 mg for HF. Improved with combined treatment."
+      },
+      {
+        "date": "2026-01-15",
+        "type": "Pulmonology follow-up",
+        "notes": "Spirometry confirmed GOLD III COPD. Beta-blockers contraindicated. Diltiazem used for AFib rate control instead. Pulmonary rehab referral placed."
+      },
+      {
+        "date": "2025-10-20",
+        "type": "Cardiology follow-up",
+        "notes": "Echo showed EF 55%, grade II diastolic dysfunction. Diagnosed HFpEF. Diuresis optimized. AFib rate-controlled, rhythm control not pursued given age and COPD."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT008",
+    "name": "Marcus Chen",
+    "age": 55,
+    "gender": "Male",
+    "chief_complaint": "Hyperkalemia found on routine labs, CKD-related medication adjustment needed",
+    "active_conditions": [
+      "Type 2 Diabetes Mellitus",
+      "CKD Stage 3b (eGFR 36)",
+      "Hypertension",
+      "Hyperkalemia (K+ 5.8)"
+    ],
+    "current_medications": [
+      { "name": "Insulin Glargine", "dose": "24 units", "frequency": "nightly" },
+      { "name": "Lisinopril", "dose": "20 mg", "frequency": "daily" },
+      { "name": "Amlodipine", "dose": "5 mg", "frequency": "daily" },
+      { "name": "Spironolactone", "dose": "25 mg", "frequency": "daily" },
+      { "name": "Atorvastatin", "dose": "20 mg", "frequency": "nightly" }
+    ],
+    "recent_labs": {
+      "Potassium": { "value": 5.8, "unit": "mEq/L" },
+      "Creatinine": { "value": 2.1, "unit": "mg/dL" },
+      "eGFR": { "value": 36, "unit": "mL/min/1.73m²" },
+      "HbA1c": { "value": 7.4, "unit": "%" },
+      "Sodium": { "value": 138, "unit": "mEq/L" },
+      "Bicarbonate": { "value": 20, "unit": "mEq/L" },
+      "Urine ACR": { "value": 480, "unit": "mg/g" },
+      "BP": { "value": "136/86", "unit": "mmHg" }
+    },
+    "allergies": ["Trimethoprim (hyperkalemia)"],
+    "visit_history": [
+      {
+        "date": "2026-03-25",
+        "type": "Urgent follow-up",
+        "notes": "Potassium 5.8 on routine labs — called back urgently. ECG normal. Spironolactone held. Dietary counseling provided. Patiromer considered to allow ACE inhibitor continuation for renal protection. Low bicarbonate consistent with metabolic acidosis from CKD."
+      },
+      {
+        "date": "2026-01-08",
+        "type": "Nephrology follow-up",
+        "notes": "eGFR stable at 38 for past 6 months. Spironolactone added for additional BP control and proteinuria reduction. Potassium was 5.2 — monitoring more frequently now."
+      },
+      {
+        "date": "2025-10-12",
+        "type": "Follow-up",
+        "notes": "Metformin stopped as eGFR dropped below 45. Insulin regimen optimized. eGFR 41. Discussed CKD diet restrictions."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT009",
+    "name": "Sandra Okafor",
+    "age": 78,
+    "gender": "Female",
+    "chief_complaint": "Anticoagulation decision in AFib with advanced CKD",
+    "active_conditions": [
+      "Atrial Fibrillation (permanent)",
+      "CKD Stage 4 (eGFR 22)",
+      "Hypertension",
+      "Type 2 Diabetes Mellitus",
+      "History of GI bleed (2024)"
+    ],
+    "current_medications": [
+      { "name": "Warfarin", "dose": "3 mg", "frequency": "daily" },
+      { "name": "Carvedilol", "dose": "6.25 mg", "frequency": "BID" },
+      { "name": "Amlodipine", "dose": "5 mg", "frequency": "daily" },
+      { "name": "Insulin Glargine", "dose": "18 units", "frequency": "nightly" },
+      { "name": "Pantoprazole", "dose": "40 mg", "frequency": "daily" },
+      { "name": "Sodium bicarbonate", "dose": "650 mg", "frequency": "TID" }
+    ],
+    "recent_labs": {
+      "INR": { "value": 2.6, "unit": "(target 2.0–3.0)" },
+      "Creatinine": { "value": 3.4, "unit": "mg/dL" },
+      "eGFR": { "value": 22, "unit": "mL/min/1.73m²" },
+      "HbA1c": { "value": 7.6, "unit": "%" },
+      "Hemoglobin": { "value": 10.4, "unit": "g/dL" },
+      "Potassium": { "value": 5.0, "unit": "mEq/L" },
+      "Bicarbonate": { "value": 18, "unit": "mEq/L" },
+      "BP": { "value": "132/78", "unit": "mmHg" },
+      "CHA2DS2-VASc score": { "value": 7, "unit": "(HTN, age>75, DM, female, prior stroke risk)" }
+    },
+    "allergies": ["Dabigatran (prior GI intolerance)", "Aspirin (GI bleeding)"],
+    "visit_history": [
+      {
+        "date": "2026-04-05",
+        "type": "Complex care review",
+        "notes": "Discussion of anticoagulation risks vs benefits. CHA₂DS₂-VASc 7 indicates high stroke risk. History of GI bleed in 2024 (upper GI, treated endoscopically). eGFR 22 — DOACs partially renally cleared and require dose adjustment or avoidance. Continuing warfarin with careful INR monitoring. HAS-BLED score 4."
+      },
+      {
+        "date": "2025-12-15",
+        "type": "Nephrology follow-up",
+        "notes": "eGFR declined from 28 to 22 over 6 months. Preparing for dialysis — AV fistula creation being considered. Dialysis education started."
+      },
+      {
+        "date": "2025-09-10",
+        "type": "Follow-up",
+        "notes": "GI bleed occurred August 2025 — upper endoscopy revealed peptic ulcer, H. pylori treated. Anticoagulation held for 4 weeks, resumed. Pantoprazole continued indefinitely."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT010",
+    "name": "Frank Petersen",
+    "age": 70,
+    "gender": "Male",
+    "chief_complaint": "Fluid management in HFpEF with AFib and CKD — triple comorbidity",
+    "active_conditions": [
+      "Heart Failure with Preserved Ejection Fraction (HFpEF, EF 60%)",
+      "Atrial Fibrillation (persistent)",
+      "CKD Stage 3a (eGFR 48)",
+      "Hypertension",
+      "Obesity (BMI 36.1)"
+    ],
+    "current_medications": [
+      { "name": "Torsemide", "dose": "20 mg", "frequency": "daily" },
+      { "name": "Apixaban", "dose": "5 mg", "frequency": "BID" },
+      { "name": "Metoprolol succinate", "dose": "25 mg", "frequency": "daily" },
+      { "name": "Candesartan", "dose": "16 mg", "frequency": "daily" },
+      { "name": "Empagliflozin", "dose": "10 mg", "frequency": "daily" }
+    ],
+    "recent_labs": {
+      "BNP": { "value": 290, "unit": "pg/mL" },
+      "Creatinine": { "value": 1.7, "unit": "mg/dL" },
+      "eGFR": { "value": 48, "unit": "mL/min/1.73m²" },
+      "Potassium": { "value": 4.5, "unit": "mEq/L" },
+      "Sodium": { "value": 138, "unit": "mEq/L" },
+      "BP": { "value": "130/78", "unit": "mmHg" },
+      "BMI": { "value": 36.1, "unit": "kg/m²" },
+      "HR": { "value": 72, "unit": "bpm (rate-controlled AFib)" }
+    },
+    "allergies": ["Spironolactone (gynecomastia)"],
+    "visit_history": [
+      {
+        "date": "2026-03-20",
+        "type": "Cardiology follow-up",
+        "notes": "Empagliflozin added per EMPEROR-Preserved trial evidence. Volume status improved with torsemide switch from furosemide (better bioavailability). BNP down from 480 to 290. eGFR stable. AFib rate-controlled."
+      },
+      {
+        "date": "2025-12-08",
+        "type": "Follow-up",
+        "notes": "BNP 480 with symptomatic fluid retention. Diuretic changed from furosemide to torsemide. Candesartan added for BP and HFpEF. Discussed weight monitoring daily."
+      },
+      {
+        "date": "2025-09-01",
+        "type": "Annual cardiac review",
+        "notes": "Echo: EF 60%, grade II/III diastolic dysfunction, LA enlargement. Persistent AFib confirmed. CKD unchanged eGFR 50. BMI 36 — weight management program referral."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT011",
+    "name": "Angela Torres",
+    "age": 62,
+    "gender": "Female",
+    "chief_complaint": "Leg pain with walking, peripheral artery disease management",
+    "active_conditions": [
+      "Peripheral Artery Disease (ABI 0.62 right, 0.68 left)",
+      "Type 2 Diabetes Mellitus",
+      "Hypertension",
+      "Hyperlipidemia",
+      "Former smoker (20 pack-years, quit 2022)"
+    ],
+    "current_medications": [
+      { "name": "Aspirin", "dose": "81 mg", "frequency": "daily" },
+      { "name": "Clopidogrel", "dose": "75 mg", "frequency": "daily" },
+      { "name": "Atorvastatin", "dose": "80 mg", "frequency": "nightly" },
+      { "name": "Ramipril", "dose": "10 mg", "frequency": "daily" },
+      { "name": "Metformin", "dose": "500 mg", "frequency": "BID (reduced dose)" },
+      { "name": "Cilostazol", "dose": "100 mg", "frequency": "BID" }
+    ],
+    "recent_labs": {
+      "HbA1c": { "value": 7.5, "unit": "%" },
+      "LDL": { "value": 58, "unit": "mg/dL" },
+      "ABI right": { "value": 0.62, "unit": "(normal >0.9, <0.9 = PAD)" },
+      "ABI left": { "value": 0.68, "unit": "" },
+      "Creatinine": { "value": 1.0, "unit": "mg/dL" },
+      "eGFR": { "value": 70, "unit": "mL/min/1.73m²" },
+      "BP": { "value": "128/76", "unit": "mmHg" },
+      "CRP": { "value": 3.2, "unit": "mg/L" }
+    },
+    "allergies": ["Ibuprofen (worsens PAD symptoms)"],
+    "visit_history": [
+      {
+        "date": "2026-02-14",
+        "type": "Vascular surgery follow-up",
+        "notes": "Claudication limiting walking to 1.5 blocks. ABI stable. Cilostazol continued. Vascular anatomy mapped — angioplasty considered if conservative management fails. Wound check on right great toe (minor abrasion) — healing well. Daily foot inspection reinforced."
+      },
+      {
+        "date": "2025-11-10",
+        "type": "Follow-up",
+        "notes": "COMPASS trial data reviewed — rivaroxaban 2.5 mg BID + aspirin discussed for MACE reduction in PAD. Patient hesitant due to bleeding concerns. Continuing dual antiplatelet for now."
+      },
+      {
+        "date": "2025-08-25",
+        "type": "Vascular clinic initial visit",
+        "notes": "PAD diagnosed by ABI testing. Statin intensified to atorvastatin 80 mg. Supervised exercise program initiated. Smoking cessation confirmed 3 years — encouraged."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT012",
+    "name": "Ryan Nakamura",
+    "age": 28,
+    "gender": "Male",
+    "chief_complaint": "Type 1 diabetes with recurrent hypoglycemia and thyroid disorder",
+    "active_conditions": [
+      "Type 1 Diabetes Mellitus (on closed-loop pump)",
+      "Hashimoto's Thyroiditis",
+      "Hypothyroidism",
+      "Hypoglycemia unawareness"
+    ],
+    "current_medications": [
+      { "name": "Insulin pump (Omnipod 5)", "dose": "TDD ~42 units", "frequency": "continuous SQ insulin lispro" },
+      { "name": "Levothyroxine", "dose": "100 mcg", "frequency": "daily (morning, fasting)" },
+      { "name": "Glucagon nasal powder (Baqsimi)", "dose": "3 mg", "frequency": "PRN hypoglycemia" }
+    ],
+    "recent_labs": {
+      "HbA1c": { "value": 6.9, "unit": "%" },
+      "Time-in-range (70-180 mg/dL)": { "value": 68, "unit": "%" },
+      "Time below range (<70 mg/dL)": { "value": 5.2, "unit": "%" },
+      "TSH": { "value": 4.8, "unit": "mIU/L (target 0.5–2.5 for age)" },
+      "Free T4": { "value": 0.9, "unit": "ng/dL (low normal)" },
+      "Anti-TPO antibodies": { "value": 420, "unit": "IU/mL (elevated)" },
+      "Creatinine": { "value": 0.9, "unit": "mg/dL" },
+      "C-peptide": { "value": "<0.1", "unit": "ng/mL (confirms T1DM)" }
+    },
+    "allergies": ["NKDA"],
+    "visit_history": [
+      {
+        "date": "2026-03-28",
+        "type": "Endocrinology follow-up",
+        "notes": "Time below range at 5.2% — above recommended <4%. Hypoglycemia unawareness confirmed on structured questionnaire. Sensor glucose alarm threshold raised. Closed-loop algorithm settings adjusted. TSH 4.8 — levothyroxine dose increase from 88 mcg to 100 mcg considered."
+      },
+      {
+        "date": "2025-12-15",
+        "type": "Endocrinology follow-up",
+        "notes": "Switched from MDI to Omnipod 5 closed-loop system 4 months ago. HbA1c improved from 7.6% to 6.9%. TIR improving but nocturnal hypoglycemia episodes persist — basal rate adjusted."
+      },
+      {
+        "date": "2025-09-02",
+        "type": "Follow-up",
+        "notes": "HbA1c 7.6% on MDI. Hashimoto's diagnosed — levothyroxine started. Patient concerned about hypoglycemia while exercising — discussed carbohydrate supplementation strategies."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT013",
+    "name": "Brenda Harrington",
+    "age": 49,
+    "gender": "Female",
+    "chief_complaint": "Metabolic syndrome workup; elevated triglycerides and pre-hypertension",
+    "active_conditions": [
+      "Metabolic Syndrome",
+      "Pre-hypertension",
+      "Pre-diabetes (HbA1c 6.0%)",
+      "Hypertriglyceridemia",
+      "Central Obesity (waist 40 inches)"
+    ],
+    "current_medications": [
+      { "name": "Fenofibrate", "dose": "145 mg", "frequency": "daily" },
+      { "name": "Lisinopril", "dose": "5 mg", "frequency": "daily" }
+    ],
+    "recent_labs": {
+      "HbA1c": { "value": 6.0, "unit": "%" },
+      "Fasting glucose": { "value": 108, "unit": "mg/dL" },
+      "Triglycerides": { "value": 398, "unit": "mg/dL" },
+      "HDL": { "value": 38, "unit": "mg/dL" },
+      "LDL": { "value": 122, "unit": "mg/dL" },
+      "BP": { "value": "134/86", "unit": "mmHg" },
+      "Waist circumference": { "value": 40, "unit": "inches" },
+      "BMI": { "value": 31.4, "unit": "kg/m²" },
+      "ALT": { "value": 58, "unit": "U/L" },
+      "Creatinine": { "value": 0.7, "unit": "mg/dL" }
+    },
+    "allergies": ["Statins (myopathy — tried rosuvastatin and simvastatin)"],
+    "visit_history": [
+      {
+        "date": "2026-04-08",
+        "type": "Primary care follow-up",
+        "notes": "Triglycerides remain very elevated at 398 despite fenofibrate. Icosapent ethyl (Vascepa) being considered per REDUCE-IT trial evidence. Statin allergy limits LDL management — PCSK9 inhibitor discussed. Lifestyle intensification counseled. HbA1c 6.0 — screening for T2DM annually."
+      },
+      {
+        "date": "2026-01-20",
+        "type": "Follow-up",
+        "notes": "Fenofibrate started — triglycerides down from 512 to 398. Patient reports mild muscle aches on prior statins. Bempedoic acid discussed as statin-free LDL lowering option."
+      },
+      {
+        "date": "2025-10-15",
+        "type": "Metabolic syndrome workup",
+        "notes": "Diagnosed with metabolic syndrome meeting 4/5 criteria. Intensive lifestyle counseling and Mediterranean diet referral. Weight loss goal set at 7% body weight."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT014",
+    "name": "Harold Jenkins",
+    "age": 77,
+    "gender": "Male",
+    "chief_complaint": "Approaching dialysis — CKD Stage 5, access planning",
+    "active_conditions": [
+      "CKD Stage 5 (eGFR 12, pre-dialysis)",
+      "Hypertension",
+      "Type 2 Diabetes Mellitus",
+      "Anemia of CKD",
+      "Hyperphosphatemia",
+      "Secondary Hyperparathyroidism",
+      "Metabolic Acidosis"
+    ],
+    "current_medications": [
+      { "name": "Amlodipine", "dose": "10 mg", "frequency": "daily" },
+      { "name": "Carvedilol", "dose": "12.5 mg", "frequency": "BID" },
+      { "name": "Sevelamer", "dose": "800 mg", "frequency": "TID with meals" },
+      { "name": "Calcitriol", "dose": "0.5 mcg", "frequency": "daily" },
+      { "name": "Sodium bicarbonate", "dose": "1300 mg", "frequency": "TID" },
+      { "name": "Darbepoetin alfa", "dose": "60 mcg", "frequency": "every 2 weeks SQ" },
+      { "name": "Insulin NPH", "dose": "18 units", "frequency": "BID" },
+      { "name": "Ferrous sulfate", "dose": "325 mg", "frequency": "daily" }
+    ],
+    "recent_labs": {
+      "Creatinine": { "value": 5.8, "unit": "mg/dL" },
+      "eGFR": { "value": 12, "unit": "mL/min/1.73m²" },
+      "BUN": { "value": 78, "unit": "mg/dL" },
+      "Potassium": { "value": 5.4, "unit": "mEq/L" },
+      "Phosphorus": { "value": 6.8, "unit": "mg/dL" },
+      "PTH": { "value": 380, "unit": "pg/mL" },
+      "Bicarbonate": { "value": 16, "unit": "mEq/L" },
+      "Hemoglobin": { "value": 9.8, "unit": "g/dL" },
+      "Albumin": { "value": 3.2, "unit": "g/dL" },
+      "HbA1c": { "value": 7.0, "unit": "%" }
+    },
+    "allergies": ["ACE inhibitors (angioedema)"],
+    "visit_history": [
+      {
+        "date": "2026-04-10",
+        "type": "Pre-dialysis access planning",
+        "notes": "eGFR 12 — approaching initiation threshold. AV fistula placed in left forearm 3 months ago, maturing well (thrill palpable). Discussed hemodialysis vs peritoneal dialysis options. PD preferred by patient. Hyperphosphatemia poorly controlled — dietitian review. PTH 380 — cinacalcet being considered."
+      },
+      {
+        "date": "2026-01-25",
+        "type": "Nephrology follow-up",
+        "notes": "eGFR declined from 18 to 12 over 4 months. Dialysis access surgery (AV fistula left forearm) performed. Sodium bicarbonate dose increased. Anemia partially responsive to ESA — ferritin checked, iron replete."
+      },
+      {
+        "date": "2025-10-08",
+        "type": "Nephrology follow-up",
+        "notes": "eGFR 18. Dialysis education completed. Patient and family attended CKD class. Transplant evaluated — not a candidate due to age and cardiac risk. AV fistula planning initiated."
+      }
+    ]
+  },
+  {
+    "patient_id": "PT015",
+    "name": "Gloria Martinez",
+    "age": 65,
+    "gender": "Female",
+    "chief_complaint": "Post-MI secondary prevention, dual antiplatelet therapy duration decision",
+    "active_conditions": [
+      "Recent STEMI (6 months ago, LAD territory)",
+      "Type 2 Diabetes Mellitus",
+      "Hypertension",
+      "Heart Failure post-MI (EF 40%, improving)",
+      "Hyperlipidemia"
+    ],
+    "current_medications": [
+      { "name": "Aspirin", "dose": "81 mg", "frequency": "daily (lifelong)" },
+      { "name": "Ticagrelor", "dose": "90 mg", "frequency": "BID" },
+      { "name": "Metoprolol succinate", "dose": "50 mg", "frequency": "daily" },
+      { "name": "Ramipril", "dose": "10 mg", "frequency": "daily" },
+      { "name": "Eplerenone", "dose": "25 mg", "frequency": "daily" },
+      { "name": "Atorvastatin", "dose": "80 mg", "frequency": "nightly" },
+      { "name": "Empagliflozin", "dose": "10 mg", "frequency": "daily" },
+      { "name": "Metformin", "dose": "500 mg", "frequency": "BID" }
+    ],
+    "recent_labs": {
+      "LDL": { "value": 48, "unit": "mg/dL" },
+      "HbA1c": { "value": 7.1, "unit": "%" },
+      "Creatinine": { "value": 0.9, "unit": "mg/dL" },
+      "eGFR": { "value": 76, "unit": "mL/min/1.73m²" },
+      "Potassium": { "value": 4.3, "unit": "mEq/L" },
+      "BNP": { "value": 180, "unit": "pg/mL" },
+      "Echo EF": { "value": 40, "unit": "% (improved from 30% at discharge)" },
+      "BP": { "value": "118/72", "unit": "mmHg" },
+      "HR": { "value": 62, "unit": "bpm" }
+    },
+    "allergies": ["Clopidogrel (poor metabolizer CYP2C19*2/*2)"],
+    "visit_history": [
+      {
+        "date": "2026-04-12",
+        "type": "Cardiology 6-month post-MI follow-up",
+        "notes": "6 months post-STEMI with drug-eluting stent to LAD. EF improved from 30% to 40% on GDMT. Ticagrelor 90 mg BID — discussing transition to 60 mg BID at 12 months per PEGASUS data. Clopidogrel avoided due to CYP2C19 poor metabolizer status. Eplerenone added for EF <40% post-MI. LDL well-controlled at 48."
+      },
+      {
+        "date": "2026-01-20",
+        "type": "Cardiology 3-month follow-up",
+        "notes": "Echo shows EF improving to 36% from 30%. GDMT optimized — ramipril up-titrated, metoprolol continued, eplerenone added. Empagliflozin started for HF benefit per EMPEROR data. Patient tolerating all medications well. No angina."
+      },
+      {
+        "date": "2025-10-15",
+        "type": "Post-STEMI discharge follow-up",
+        "notes": "Discharged 1 week post-primary PCI to LAD. EF 30% at discharge. Started on GDMT. CYP2C19 genotyping resulted — poor metabolizer, ticagrelor chosen over clopidogrel. Cardiac rehab enrollment confirmed."
+      }
+    ]
+  }
+]

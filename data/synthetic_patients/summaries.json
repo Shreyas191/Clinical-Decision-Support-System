@@ -1,0 +1,202 @@
+[
+  {
+    "patient_id": "synthetic-000",
+    "gender": "male",
+    "birth_year": "1940",
+    "conditions": [
+      "Type 2 diabetes mellitus",
+      "Hypertension"
+    ],
+    "medications": [
+      "Metformin 1000mg",
+      "Lisinopril 10mg"
+    ],
+    "recent_labs": {
+      "HbA1c": "8.2 %",
+      "eGFR": "72 mL/min",
+      "BP": "145/92 mmHg"
+    },
+    "allergies": [
+      "Penicillin"
+    ]
+  },
+  {
+    "patient_id": "synthetic-001",
+    "gender": "female",
+    "birth_year": "1945",
+    "conditions": [
+      "Heart failure with reduced ejection fraction",
+      "Type 2 diabetes"
+    ],
+    "medications": [
+      "Carvedilol 25mg",
+      "Furosemide 40mg",
+      "Empagliflozin 10mg"
+    ],
+    "recent_labs": {
+      "EF": "35 %",
+      "BNP": "450 pg/mL",
+      "eGFR": "48 mL/min"
+    },
+    "allergies": []
+  },
+  {
+    "patient_id": "synthetic-002",
+    "gender": "male",
+    "birth_year": "1950",
+    "conditions": [
+      "CKD Stage 3",
+      "Hypertension"
+    ],
+    "medications": [
+      "Amlodipine 5mg",
+      "Losartan 50mg"
+    ],
+    "recent_labs": {
+      "eGFR": "42 mL/min",
+      "Creatinine": "1.8 mg/dL",
+      "BP": "138/88 mmHg"
+    },
+    "allergies": [
+      "Sulfa drugs"
+    ]
+  },
+  {
+    "patient_id": "synthetic-003",
+    "gender": "female",
+    "birth_year": "1955",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension"
+    ],
+    "medications": [
+      "Warfarin 5mg",
+      "Metoprolol 50mg"
+    ],
+    "recent_labs": {
+      "INR": "2.4",
+      "HR": "72 bpm",
+      "BP": "130/80 mmHg"
+    },
+    "allergies": []
+  },
+  {
+    "patient_id": "synthetic-004",
+    "gender": "male",
+    "birth_year": "1960",
+    "conditions": [
+      "Hyperlipidemia"
+    ],
+    "medications": [
+      "Atorvastatin 40mg"
+    ],
+    "recent_labs": {
+      "LDL": "175 mg/dL",
+      "HDL": "45 mg/dL",
+      "Total cholesterol": "240 mg/dL"
+    },
+    "allergies": [
+      "Statins \u2014 myopathy"
+    ]
+  },
+  {
+    "patient_id": "synthetic-005",
+    "gender": "female",
+    "birth_year": "1965",
+    "conditions": [
+      "Type 2 diabetes",
+      "CKD Stage 3b",
+      "Anemia"
+    ],
+    "medications": [
+      "Metformin 500mg",
+      "Insulin glargine 20 units"
+    ],
+    "recent_labs": {
+      "HbA1c": "9.1 %",
+      "eGFR": "38 mL/min",
+      "Hemoglobin": "10.2 g/dL"
+    },
+    "allergies": []
+  },
+  {
+    "patient_id": "synthetic-006",
+    "gender": "male",
+    "birth_year": "1970",
+    "conditions": [
+      "Hypertension",
+      "Gout"
+    ],
+    "medications": [
+      "Hydrochlorothiazide 25mg",
+      "Allopurinol 300mg"
+    ],
+    "recent_labs": {
+      "BP": "148/94 mmHg",
+      "Uric acid": "8.9 mg/dL"
+    },
+    "allergies": [
+      "Aspirin"
+    ]
+  },
+  {
+    "patient_id": "synthetic-007",
+    "gender": "female",
+    "birth_year": "1975",
+    "conditions": [
+      "Type 2 diabetes",
+      "Obesity",
+      "Hypertension"
+    ],
+    "medications": [
+      "Semaglutide 1mg weekly",
+      "Lisinopril 20mg"
+    ],
+    "recent_labs": {
+      "HbA1c": "7.8 %",
+      "BMI": "34.2 kg/m2",
+      "BP": "136/86 mmHg"
+    },
+    "allergies": []
+  },
+  {
+    "patient_id": "synthetic-008",
+    "gender": "male",
+    "birth_year": "1980",
+    "conditions": [
+      "Heart failure",
+      "Hypertension",
+      "Hyperlipidemia"
+    ],
+    "medications": [
+      "Sacubitril/valsartan 97/103mg",
+      "Rosuvastatin 20mg"
+    ],
+    "recent_labs": {
+      "EF": "42 %",
+      "BP": "124/76 mmHg",
+      "LDL": "68 mg/dL"
+    },
+    "allergies": []
+  },
+  {
+    "patient_id": "synthetic-009",
+    "gender": "female",
+    "birth_year": "1985",
+    "conditions": [
+      "Type 2 diabetes",
+      "Peripheral neuropathy"
+    ],
+    "medications": [
+      "Metformin 1000mg",
+      "Gabapentin 300mg"
+    ],
+    "recent_labs": {
+      "HbA1c": "7.5 %",
+      "Vitamin B12": "180 pg/mL"
+    },
+    "allergies": [
+      "Contrast dye"
+    ]
+  }
+]

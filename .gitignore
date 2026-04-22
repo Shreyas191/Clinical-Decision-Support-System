@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+sessions.db*
+vectorstore/chroma_db/
+test_chroma/
+diag_chroma.py
+list_models.py
+main_output.txt
+.DS_Store

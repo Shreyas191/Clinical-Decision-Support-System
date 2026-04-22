@@ -1,31 +1,36 @@
-# Fly.io configuration — deploy with: fly deploy
-app = "cdss-free"
-primary_region = "ord"
+# fly.toml app configuration file generated for cdss-free on 2026-04-22T14:00:54-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'cdss-free'
+primary_region = 'ord'
 
 [build]
 
 [env]
-  DATA_DIR = "/data"
-  FRONTEND_URL = "https://your-app.vercel.app"
-  BACKEND_URL  = "https://cdss-free.fly.dev"
+  BACKEND_URL = 'https://cdss-free.fly.dev'
+  DATA_DIR = '/data'
+  FRONTEND_URL = 'https://cdss-h90la4fxd-shreyas191s-projects.vercel.app'
+
+[[mounts]]
+  source = 'cdss_data'
+  destination = '/data'
 
 [http_service]
-  internal_port     = 8000
-  force_https       = true
-  auto_stop_machines  = true
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
 
   [http_service.concurrency]
-    type       = "connections"
+    type = 'connections'
     hard_limit = 25
     soft_limit = 20
 
 [[vm]]
-  memory   = "512mb"
-  cpu_kind = "shared"
-  cpus     = 1
-
-[[mounts]]
-  source      = "cdss_data"
-  destination = "/data"
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 512

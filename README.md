@@ -131,28 +131,6 @@ python3 tests/run_eval.py
 ```
 
 ---
-
-## Deploy (free)
-
-### Backend → Render.com
-
-1. Push to GitHub
-2. Go to render.com → New Web Service → connect repo
-3. Build command: `pip install -r requirements.txt && python3 data/scripts/pull_openfda.py && python3 data/scripts/parse_synthea.py && python3 vectorstore/ingest.py`
-4. Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-5. Add `GROQ_API_KEY` and `GOOGLE_API_KEY` as environment variables
-6. Deploy
-
-### Frontend → Vercel
-
-```bash
-cd frontend
-# Set VITE_API_URL to your Render backend URL in .env.local
-npx vercel deploy
-```
-
----
-
 ## Project structure
 
 ```

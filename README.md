@@ -1,7 +1,4 @@
-# CDSS — Clinical Decision Support System (Free Stack)
-
-A multi-agent clinical decision support platform built entirely with free tools.
-Zero cloud costs. Fully local development. Deploy to free hosting tiers.
+# CDSS — Clinical Decision Support System
 
 > **Data:** Uses only public guidelines (PDFs you download) and synthetic patient
 > data (Synthea or built-in placeholders). No real PHI is ever processed.
